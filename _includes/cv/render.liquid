@@ -237,6 +237,22 @@
                   </td>
                 </tr>
               {% endif %}
+              {% if site.data.socials.orcid_id %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold"><b>ORCID</b></td>
+                  <td class="p-1 pl-2 font-weight-light">
+                    <a href="https://orcid.org/{{ site.data.socials.orcid_id }}">{{ site.data.socials.orcid_id }}</a>
+                  </td>
+                </tr>
+              {% endif %}
+              {% if site.data.socials.scopus_id %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold"><b>Scopus ID</b></td>
+                  <td class="p-1 pl-2 font-weight-light">
+                    <a href="https://www.scopus.com/authid/detail.uri?authorId={{ site.data.socials.scopus_id }}">{{ site.data.socials.scopus_id }}</a>
+                  </td>
+                </tr>
+              {% endif %}
               {% if basics.url %}
                 <tr>
                   <td class="p-1 pr-2 font-weight-bold"><b>Website</b></td>
