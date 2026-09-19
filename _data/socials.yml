@@ -1,10 +1,8 @@
 # this file contains the social media links and usernames of the author
 # the socials will be displayed in the order they are defined here
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
-cv_pdf: /assets/pdf/CV_Wuensch.pdf # path to your CV PDF file
 email: urban.wunsch@chalmers.se # your email address
-github_username: urbanwuensch
 linkedin_username: urbanwuensch
-x_username: UrbanWuensch
 scholar_userid: mOwcA1MAAAAJ # your Google Scholar ID
-rss_icon: true # comment this line to hide the RSS icon
+orcid_id: 0000-0001-6972-6932
+scopus_id: 57192896682
