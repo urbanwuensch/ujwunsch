@@ -8,7 +8,7 @@
       "region": "Sweden",
       "countryCode": "SE"
     },
-    "summary": "Researcher working on all things dissolved in water — disentangling the composition of complex environmental samples to understand the fate of organic substances in aquatic systems. As of late 2025: 29 publications (8 as lead), H-index 16 (Scopus), 1500+ citations."
+    "summary": "Researcher working on all things dissolved in water — disentangling the composition of complex environmental samples to understand the fate of organic substances in aquatic systems. As of late 2026: 34 publications (10 as lead), H-index 19, 2100+ citations."
   },
   "work": [
     {
@@ -150,6 +150,11 @@
     }
   ],
   "supervision": [
+    {
+      "name": "Julia Iwan (PhD)",
+      "position": "Main supervisor",
+      "startDate": "2025"
+    },
     {
       "name": "Frederik Lenk (B.Sc.)",
       "position": "Main supervisor",
