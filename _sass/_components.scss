@@ -2,6 +2,13 @@
  * Reusable component styles: Cards, captions, profiles, etc.
  ******************************************************************************/
 
+// Site override: nav bar items are otherwise all lowercase ("about",
+// "publications", "projects"); the CV page's title stays "CV" (it's an
+// acronym) but the nav link should match the rest of the nav visually.
+a.nav-link[href$="/cv/"] {
+  text-transform: lowercase;
+}
+
 // Checklist
 
 ul.task-list {
