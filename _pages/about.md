@@ -19,7 +19,7 @@ latest_posts:
   enabled: false
 ---
 
-I'm Urban Wünsch, a researcher working on all things dissolved in water. My work centers on disentangling the composition of complex environmental samples to understand the fate of Dissolved Organic Matter (DOM) in water by shining a light on the key processes involved.
+I'm Urban Wünsch, a researcher working on organic compounds dissolved in water. My work centers on disentangling the composition of complex environmental samples to understand the fate of Dissolved Organic Matter (DOM) in water by shining a light on the key processes involved.
 
 A simple analogy helps illustrate why this matters: a cup of [black tea](https://www.youtube.com/watch?v=e43xgMIW6K4) gets darker as its flavor intensifies — we understand that chemistry well. River water can show the same kind of color, but for very different reasons. Where do those colored substances come from, and what happens when bacteria use them as a food source?
 
