@@ -235,11 +235,21 @@
   "skills": [
     {
       "name": "Dissolved organic matter characterization",
-      "keywords": ["EEM spectroscopy", "Absorbance spectroscopy", "HPSEC", "FT-ICR-MS"]
+      "keywords": [
+        "Excitation-Emission Matrix (EEM) spectroscopy",
+        "Absorbance spectroscopy",
+        "High Performance Size Exclusion Chromatography (HPSEC)",
+        "Fourier Transform Ion Cyclotron Resonance Mass Spectrometry (FT-ICR-MS)"
+      ]
     },
     {
       "name": "Chemometrics",
-      "keywords": ["PCA", "PARAFAC & PARAFAC2", "N-PLS", "ACMTF"]
+      "keywords": [
+        "Principal Component Analysis (PCA)",
+        "Parallel Factor Analysis (PARAFAC & PARAFAC2)",
+        "N-way Partial Least Squares (N-PLS)",
+        "Advanced Coupled Matrix and Tensor Factorization (ACMTF)"
+      ]
     }
   ],
   "interests": [
