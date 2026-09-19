@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Assistant Professor, Chalmers - Thematic Area Ocean (Dept. of Architecture and Civil Engineering)
+subtitle: "<span class=\"font-weight-bold\">Assistant Professor, Chalmers - Thematic Area Ocean (Dept. of Architecture and Civil Engineering)</span><div style=\"margin-top: 0.5rem;\">Dissolved Organic Matter (DOM) | Excitation-Emission Matrix (EEM) | ultraviolet-visible spectroscopy | enzyme biogeochemistry | machine learning | parallel factor analysis (PARAFAC) | absorbance | fluorescence | submersible sensors</div>"
 
 profile:
   align: right
