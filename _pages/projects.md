@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A collection of my research projects.
+description: Funded research grants and overarching long-term research projects and interests
 nav: true
 nav_order: 3
 horizontal: false
