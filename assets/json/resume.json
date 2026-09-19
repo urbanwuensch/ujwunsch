@@ -46,21 +46,21 @@
       "institution": "Technical University of Denmark",
       "area": "Resolving the chemical structures responsible for the UV-visible spectroscopic properties of dissolved organic matter in aquatic environments",
       "studyType": "PhD",
-      "endDate": "2018"
+      "date": "2018"
     },
     {
       "institution": "University of Applied Sciences Bremerhaven",
       "location": "Germany",
       "area": "Biotechnology",
       "studyType": "M.Sc.",
-      "endDate": "2014"
+      "date": "2014"
     },
     {
       "institution": "University of Applied Sciences Bingen",
       "location": "Germany",
       "area": "Biotechnology",
       "studyType": "B.Sc.",
-      "endDate": "2011"
+      "date": "2011"
     }
   ],
   "awards": [
@@ -99,26 +99,6 @@
       "awarder": "Carl Tryggers Stiftelse",
       "date": "2019",
       "summary": "552,000 SEK, main author"
-    },
-    {
-      "title": "Invited participation in the Dissertations Symposium in Chemical Oceanography",
-      "awarder": "National Science Foundation & National Oceanic and Atmospheric Administration",
-      "date": "2018"
-    },
-    {
-      "title": "Student travel award and invited participation",
-      "awarder": "International Humic Substances Society",
-      "date": "2018"
-    },
-    {
-      "title": "Scholarship for conference participation",
-      "awarder": "Otto Mønsted Fond",
-      "date": "2017"
-    },
-    {
-      "title": "Scholarship for external research stay",
-      "awarder": "Kaj og Hermilla Ostenfeld's Fond",
-      "date": "2015"
     }
   ],
   "teaching": [
@@ -244,23 +224,6 @@
       "title": "Mathematical chromatography deciphers the molecular fingerprints of dissolved organic matter",
       "publisher": "Aquatic Sciences Meeting 2021 (online)",
       "releaseDate": "2021"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Patent application (DTU)",
-      "description": "Determination of dissolved organic matter photosensitivity based on fluorescence ratios",
-      "summary": "Determination of dissolved organic matter photosensitivity based on fluorescence ratios",
-      "startDate": "2024",
-      "highlights": ["Main author"]
-    },
-    {
-      "name": "drEEM toolbox for MATLAB",
-      "description": "MATLAB toolbox for the multiway decomposition of fluorescence EEMs into underlying fluorescence components (PARAFAC).",
-      "summary": "MATLAB toolbox for the multiway decomposition of fluorescence EEMs into underlying fluorescence components (PARAFAC).",
-      "url": "https://dreem.openfluor.org",
-      "startDate": "2018",
-      "highlights": ["Main developer"]
     }
   ],
   "skills": [

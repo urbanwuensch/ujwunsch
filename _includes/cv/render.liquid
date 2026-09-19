@@ -309,11 +309,11 @@
           </div>
         {% endif %}
 
-        <!-- Awards -->
+        <!-- Awards (displayed as "Research grants") -->
         {% if site.data.resume.awards.size > 0 %}
           <a class="anchor" id="awards"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Awards</h3>
+            <h3 class="card-title font-weight-medium">Research grants</h3>
             <div>
               {% assign entries = site.data.resume.awards %}
               {% include cv/awards.liquid %}
@@ -369,11 +369,11 @@
           </div>
         {% endif %}
 
-        <!-- Interests -->
+        <!-- Interests (displayed as "Membership in Scientific Communities") -->
         {% if site.data.resume.interests.size > 0 %}
           <a class="anchor" id="interests"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Interests</h3>
+            <h3 class="card-title font-weight-medium">Membership in Scientific Communities</h3>
             <div>
               {% assign entries = site.data.resume.interests %}
               {% include cv/interests.liquid %}
