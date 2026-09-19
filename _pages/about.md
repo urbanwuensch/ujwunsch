@@ -23,7 +23,7 @@ I'm Urban Wünsch, a researcher working on all things dissolved in water. My wor
 
 A simple analogy helps illustrate why this matters: a cup of [black tea](https://www.youtube.com/watch?v=e43xgMIW6K4) gets darker as its flavor intensifies — we understand that chemistry well. River water can show the same kind of color, but for very different reasons. Where do those colored substances come from, and what happens when bacteria use them as a food source?
 
-This raises practical questions. Should we be concerned about colored river water, or are the substances involved largely harmless? Where do they originate, do they persist in the environment, and how can they be removed to produce clean, colorless drinking water? Could the enzymes that degrade natural organic matter also have industrial applications?
+I investigate questions such as where do DOM's compounds originate from, why do they persist, what controls DOMs persistence, and how can we distinguish natural DOM from anthropogenic contaminants? How are enzymes involved in the degradation of DOM?
 
 These questions sound straightforward, but the sheer number of organic compounds in a typical water sample routinely overwhelms standard analytical techniques.
 
