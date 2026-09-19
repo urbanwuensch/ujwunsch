@@ -1,6 +1,6 @@
 ---
 ---
-<div class="row">
+<div class="row" data-citations="{{ entry.citations | default: 0 }}" data-year="{{ entry.year | default: 0 }}">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}

@@ -13,6 +13,14 @@ nav_order: 2
 
 {% include bib_search.liquid %}
 
+<script src="{{ '/assets/js/publication-sort.js' | relative_url | bust_file_cache }}"></script>
+<style>
+  .publication-sort-toolbar .btn.active {
+    background-color: var(--global-theme-color);
+    color: var(--global-hover-text-color);
+  }
+</style>
+
 <div class="publications">
 
 {% bibliography %}
