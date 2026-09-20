@@ -8,6 +8,18 @@
       "region": "Sweden",
       "countryCode": "SE"
     },
+    "profiles": [
+      {
+        "network": "ORCID",
+        "username": "0000-0001-6972-6932",
+        "url": "https://orcid.org/0000-0001-6972-6932"
+      },
+      {
+        "network": "Scopus ID",
+        "username": "57192896682",
+        "url": "https://www.scopus.com/authid/detail.uri?authorId=57192896682"
+      }
+    ],
     "summary": "Researcher working on organic compounds dissolved in water — disentangling the composition of complex environmental samples to understand the fate of Dissolved Organic Matter (DOM) in aquatic systems. As of late 2026: 34 publications (10 as lead), H-index 19, 2100+ citations."
   },
   "work": [
