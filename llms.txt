@@ -1,0 +1,29 @@
+---
+permalink: /llms.txt
+sitemap: false
+---
+# {{ site.data.resume.basics.name }}
+
+> {{ site.data.resume.basics.label }}. {{ site.data.resume.basics.summary }}
+
+Personal academic website of {{ site.data.resume.basics.name }}. The pages below are plain HTML; the CV is also available as structured data.
+
+## Pages
+
+- [About]({{ site.url }}/): research focus, methods and contact.
+- [CV]({{ site.url }}/cv/): education, positions, research grants, teaching, supervision, conferences and skills.
+- [Publications]({{ site.url }}/publications/): peer-reviewed journal articles with DOIs, sortable by year or citations.
+- [Projects]({{ site.url }}/projects/): funded research grants and long-term research projects.
+
+## Machine-readable
+
+- [CV as JSON Resume]({{ site.url }}/assets/json/resume.json): the single source of truth for the CV page.
+- [CV as PDF]({{ site.url }}/assets/pdf/CV_Wuensch.pdf): the same content as a downloadable document.
+- [Sitemap]({{ site.url }}/sitemap.xml)
+
+## Identifiers
+
+- ORCID: [{{ site.data.socials.orcid_id }}](https://orcid.org/{{ site.data.socials.orcid_id }})
+- Scopus Author ID: [{{ site.data.socials.scopus_id }}](https://www.scopus.com/authid/detail.uri?authorId={{ site.data.socials.scopus_id }})
+- Google Scholar: [profile](https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }})
+- Chalmers: [staff page](https://www.chalmers.se/en/persons/wuensch/)

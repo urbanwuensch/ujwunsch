@@ -20,26 +20,29 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>
-  {% if site.title == 'blank' %}
-    {% capture title %}{{ author_name }}{% endcapture %}
-  {% else %}
-    {% capture title %}{{ site.title }}{% endcapture %}
-  {% endif %}
-  {% if page.url == '/blog/index.html' %}
+{% if site.title == 'blank' %}
+  {% capture title %}{{ author_name }}{% endcapture %}
+{% else %}
+  {% capture title %}{{ site.title }}{% endcapture %}
+{% endif %}
+{% capture seo_title %}
+  {%- if page.url == '/blog/index.html' -%}
     {{ page.title }} | {{ title }}
-  {% elsif page.title != 'blank' and page.url != '/' %}
-    {% if page.title == null or page.title == '' %}
+  {%- elsif page.title != 'blank' and page.url != '/' -%}
+    {%- if page.title == null or page.title == '' -%}
       {{ page.date | date: '%Y' }} | {{ title }}
-    {% else %}
+    {%- else -%}
       {{ page.title }} | {{ title }}
-    {% endif %}
-  {% else %}
+    {%- endif -%}
+  {%- else -%}
     {{ title }} | carbon &amp; aquatic spectroscopy
-  {% endif %}
-</title>
+  {%- endif -%}
+{% endcapture %}
+<title>{{ seo_title }}</title>
 <meta name="author" content="{{ author_name }}">
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<link rel="alternate" type="application/json" href="{{ '/assets/json/resume.json' | relative_url }}" title="Curriculum vitae (JSON Resume)">
+<link rel="alternate" type="application/pdf" href="{{ site.data.resume.cv_pdf | default: '/assets/pdf/CV_Wuensch.pdf' | relative_url }}" title="Curriculum vitae (PDF)">
 {% if page.keywords or site.keywords %}
   <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
 {% endif %}
@@ -55,7 +58,7 @@
   <!-- OpenGraph -->
   <meta property="og:site_name" content="{{ title }}">
   <meta property="og:type" content="{% if is_blog_post %}article{% else %}website{% endif %}">
-  <meta property="og:title" content="{% if page.title %}{{ title }} | {{ page.title }}{% else %}{{ title }}{% endif %}">
+  <meta property="og:title" content="{{ seo_title }}">
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if page.og_image or site.og_image %}
@@ -66,15 +69,17 @@
       {% assign og_image_url = og_image_source | prepend: site.baseurl | prepend: site.url %}
     {% endif %}
     <meta property="og:image" content="{{ og_image_url }}">
+    <meta property="og:image:alt" content="Portrait of {{ author_name }}">
   {% endif %}
   <meta property="og:locale" content="{{ site.lang }}">
 
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ title }}{% endif %}">
+  <meta name="twitter:title" content="{{ seo_title }}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if page.og_image or site.og_image %}
     <meta name="twitter:image" content="{{ og_image_url }}">
+    <meta name="twitter:image:alt" content="Portrait of {{ author_name }}">
   {% endif %}
   {% if site.x_username %}
     <meta name="twitter:site" content="@{{ site.x_username }}">
@@ -232,22 +237,67 @@
     {% endcase %}
   {% endfor %}
 
+  {% assign person_id = '/#person' | prepend: site.baseurl | prepend: site.url %}
+  {% assign page_url = page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' %}
+  {% capture page_description %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+  {% assign resume = site.data.resume %}
+  {% assign sp = site.schema_person %}
+  {% if page.url == '/' %}
   <script type="application/ld+json">
     {
-        "author":
-        {
-            "@type": "Person",
-            "name": "{{ author_name }}"
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "url": {{ page_url | jsonify }},
+      "name": {{ seo_title | strip | replace: '&amp;', '&' | jsonify }},
+      "description": {{ page_description | strip | jsonify }},
+      "inLanguage": {{ site.lang | jsonify }},
+      "mainEntity": {
+        "@type": "Person",
+        "@id": {{ person_id | jsonify }},
+        "name": {{ author_name | strip | jsonify }},
+        "givenName": {{ site.first_name | jsonify }},
+        "familyName": {{ site.last_name | jsonify }},
+        "url": {{ site.url | append: '/' | jsonify }},
+        "image": {{ '/assets/img/portrait.jpeg' | prepend: site.baseurl | prepend: site.url | jsonify }},
+        "description": {{ page_description | strip | jsonify }},
+        {% if sp.job_title %}"jobTitle": {{ sp.job_title | jsonify }},{% endif %}
+        {% if sp.affiliation %}
+        "worksFor": {
+          "@type": "CollegeOrUniversity",
+          "name": {{ sp.affiliation.name | jsonify }},
+          "url": {{ sp.affiliation.url | jsonify }}
         },
-        "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
-        "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
-        "description": "{% if page.description %}{{ page.description }}{% else if site.description %}{{ site.description }}{% endif %}",
-        "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
-        {% if sameaslinks != blank %}
-        "sameAs": {{ sameaslinks | jsonify }},
         {% endif %}
-        "name": "{{ author_name }}",
-        "@context": "https://schema.org"
+        {% if resume.education %}
+        "alumniOf": [
+          {% assign institutions = resume.education | map: 'institution' | uniq %}
+          {% for institution in institutions %}
+          {"@type": "CollegeOrUniversity", "name": {{ institution | jsonify }}}{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ],
+        {% endif %}
+        {% if sp.knows_about %}"knowsAbout": {{ sp.knows_about | jsonify }},{% endif %}
+        "identifier": [
+          {"@type": "PropertyValue", "propertyID": "ORCID", "value": {{ site.data.socials.orcid_id | jsonify }}},
+          {"@type": "PropertyValue", "propertyID": "Scopus Author ID", "value": {{ site.data.socials.scopus_id | append: '' | jsonify }}}
+        ],
+        {% if sp.same_as %}{% assign sameaslinks = sameaslinks | concat: sp.same_as %}{% endif %}
+        "sameAs": {{ sameaslinks | jsonify }}
+      }
     }
   </script>
+  {% else %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "url": {{ page_url | jsonify }},
+      "name": {{ seo_title | strip | replace: '&amp;', '&' | jsonify }},
+      "description": {{ page_description | strip | jsonify }},
+      "inLanguage": {{ site.lang | jsonify }},
+      "isPartOf": {"@type": "WebSite", "name": {{ author_name | strip | jsonify }}, "url": {{ site.url | jsonify }}},
+      "author": {"@id": {{ person_id | jsonify }}}
+    }
+  </script>
+  {% endif %}
 {% endif %}

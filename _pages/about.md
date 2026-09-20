@@ -7,6 +7,7 @@ subtitle: "<span class=\"font-weight-bold\">Assistant Professor, Chalmers - Them
 profile:
   align: right
   image: portrait.jpeg
+  alt: "Portrait of Urban Wünsch"
   image_circular: false # crops the image to make it circular
 
 selected_papers: false

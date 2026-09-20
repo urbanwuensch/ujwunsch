@@ -8,11 +8,11 @@ middle_name:
 last_name: Wünsch
 contact_note: >
   Email is the most reliable way to reach me.
-description: Personal website of Urban Wünsch, researcher working on organic compounds dissolved in water.
+description: "Urban Wünsch, Assistant Professor at Chalmers. Research on dissolved organic matter in water: spectroscopy, mass spectrometry and chemometrics."
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: dissolved organic matter, water chemistry, environmental science, DTU Aqua, biogeochemistry # add your own keywords or leave empty
+keywords: dissolved organic matter, DOM, aquatic chemistry, water chemistry, fluorescence spectroscopy, EEM, PARAFAC, chemometrics, FT-ICR-MS, biogeochemistry, Chalmers University of Technology # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🌊 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.
@@ -84,12 +84,6 @@ al_folio:
     auto_apply_safe_fixes: false
 
 # -----------------------------------------------------------------------------
-# RSS Feed
-# -----------------------------------------------------------------------------
-# will use title and url fields
-# Take a look to https://github.com/jekyll/jekyll-feed for more customization
-
-# -----------------------------------------------------------------------------
 # Layout
 # -----------------------------------------------------------------------------
 
@@ -110,7 +104,25 @@ max_width: 930px
 # see https://schema.org/docs/faq.html for more information
 serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: true # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+# Extra facts for the Person structured data on the home page (see _includes/metadata.liquid).
+# Name, email, education and ORCID/Scopus IDs are taken from assets/json/resume.json and _data/socials.yml.
+schema_person:
+  job_title: Assistant Professor
+  affiliation:
+    name: Chalmers University of Technology
+    url: https://www.chalmers.se
+  knows_about:
+    - Dissolved organic matter
+    - Aquatic biogeochemistry
+    - Fluorescence spectroscopy
+    - Excitation-emission matrix (EEM) spectroscopy
+    - Size exclusion chromatography
+    - FT-ICR mass spectrometry
+    - Chemometrics
+    - PARAFAC
+  same_as:
+    - https://www.chalmers.se/en/persons/wuensch/
+og_image: /assets/og/og-image.jpg # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -225,7 +237,6 @@ plugins:
   - jekyll-archives-v2
   - jekyll-cache-bust
   - jekyll-email-protect
-  - jekyll-feed
   - jekyll-get-json
   - jekyll-imagemagick
   - jekyll-jupyter-notebook
@@ -285,7 +296,7 @@ jekyll-minifier:
   # breaking every spacing/positioning utility (e.g. .fixed-top -> broken navbar). Disable it.
   compress_css: false
   # JS minification is delegated to jekyll-terser (compress_javascript above is false).
-  exclude: ["robots.txt"]
+  exclude: ["robots.txt", "llms.txt"]
 
 # -----------------------------------------------------------------------------
 # Terser
