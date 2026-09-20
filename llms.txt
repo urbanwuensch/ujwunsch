@@ -1,0 +1,25 @@
+# Urban Wünsch
+
+> Assistant Professor, Chalmers University of Technology. Researcher working on organic compounds dissolved in water — disentangling the composition of complex environmental samples to understand the fate of Dissolved Organic Matter (DOM) in aquatic systems. As of late 2026: 34 publications (10 as lead), H-index 19, 2100+ citations.
+
+Personal academic website of Urban Wünsch. The pages below are plain HTML; the CV is also available as structured data.
+
+## Pages
+
+- [About](https://www.ujwunsch.com/): research focus, methods and contact.
+- [CV](https://www.ujwunsch.com/cv/): education, positions, research grants, teaching, supervision, conferences and skills.
+- [Publications](https://www.ujwunsch.com/publications/): peer-reviewed journal articles with DOIs, sortable by year or citations.
+- [Projects](https://www.ujwunsch.com/projects/): funded research grants and long-term research projects.
+
+## Machine-readable
+
+- [CV as JSON Resume](https://www.ujwunsch.com/assets/json/resume.json): the single source of truth for the CV page.
+- [CV as PDF](https://www.ujwunsch.com/assets/pdf/CV_Wuensch.pdf): the same content as a downloadable document.
+- [Sitemap](https://www.ujwunsch.com/sitemap.xml)
+
+## Identifiers
+
+- ORCID: [0000-0001-6972-6932](https://orcid.org/0000-0001-6972-6932)
+- Scopus Author ID: [57192896682](https://www.scopus.com/authid/detail.uri?authorId=57192896682)
+- Google Scholar: [profile](https://scholar.google.com/citations?user=mOwcA1MAAAAJ)
+- Chalmers: [staff page](https://www.chalmers.se/en/persons/wuensch/)
